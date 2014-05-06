@@ -13,9 +13,21 @@ a {
 
 }
 
-abbr {
-
+abbr, acronym {
+    border-bottom: 1px dotted inherit;
 }
+
+
+address {
+    font-style: italic;
+    white-space: pre;
+}
+
+applet, object {
+  
+}
+
+
 
 /*
 
