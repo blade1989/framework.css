@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Inputs</title>
-    <link rel="stylesheet" href="inputs.css">
+    <link rel="stylesheet" href="/framework.css">
 
         <!-- Needed for Forms Feature Detection
         <script type="text/javascript" src="html5Forms.js-master/shared/js/modernizr.com/Modernizr-2.5.3.forms.js">
