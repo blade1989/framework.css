@@ -3,11 +3,19 @@ The web's framework(0.0.0.0.1)
 ==================
 ***********************************
 
+<<<<<<< HEAD
 Author : Imri Paloja
 Email : imri.paloja@gmail.com
 HomePage : www.eurobytes.nl
 Version : 0.1
 Name : Framework.css
+=======
+Author      : Imri Paloja
+Email       : imri.paloja@gmail.com
+HomePage    : www.eurobytes.nl
+Version     : 0.1
+Name        : Framework.css
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
 
 
 Note: This is still a work in progress!
@@ -15,6 +23,7 @@ Note: This is still a work in progress!
 */
 
 /*
+<<<<<<< HEAD
 
     Vendor extensions port:
         http://jsfiddle.net/simevidas/udyTs/show/light/
@@ -27,6 +36,12 @@ Tags From: http://www.w3schools.com/tags/
 */
 
 a, abbr, acronym, address, applet, area, article, aside, audio, b, base, basefont, bdi, bdo, big, blockquote, body, br, button, canvas, caption, center, cite, code, col, colgroup, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, frame, frameset, head, header, h1, h2, h3, h4, h5, h6, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, meta, meter, nav, noframes, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, small, source, span, strike, strong, style, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, title, tr, track, tt, u, var, video, wbr {
+=======
+            Tags From: http://www.w3schools.com/tags/
+*/
+
+a, abbr, acronym, address, applet, area, article, aside, audio, b, base, basefont, bdi, bdo, big, blockquote, body, br, button, canvas, caption, center, cite, code, col, colgroup, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, frame, frameset, head, header, h1, h2, h3, h4, h5, h6, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, meta, meter, nav, noframes, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, small, source, span, strike, strong, style, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, title, tr, track, tt, u, ul, var, video, wbr {
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
     border: 0 none;
     font-family: "Times New Roman",Georgia,Serif;
     font-size: 100%;
@@ -51,6 +66,7 @@ article, aside, bdi, details, dialog, img figcaption, figure, footer, header, ma
 
 /*
 
+<<<<<<< HEAD
 When the firefox equivalent has been tested and, deduced as to working,
 the chome scrollbar feature will be activated along with the firefox plugin
 
@@ -64,10 +80,26 @@ background: #f9f9f9;
 
 ::-webkit-scrollbar-thumb {
 background: #CCCCCC;
+=======
+            When the firefox equivalent has been tested and, deduced as to working, 
+            the chome scrollbar feature will be activated along with the firefox plugin
+
+::-webkit-scrollbar {
+    width: 10px; height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CCCCCC;
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
 
 }
 
 
+<<<<<<< HEAD
 /* Arrow down up
 
 /* Up arrow
@@ -86,6 +118,26 @@ height: 0;
 border-left: 5px solid transparent;
 border-right: 5px solid transparent;
 border-bottom: 5px solid #FFFFFF;
+=======
+/* Arrow down up 
+
+/* Up arrow 
+::-webkit-scrollbar-thumb:hover {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #FFFFFF;
+}
+
+/* Down arrow 
+::-webkit-scrollbar-thumb {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #FFFFFF;
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
 }
 
 
@@ -96,13 +148,20 @@ http://jscrollpane.kelvinluck.com/
 
 */
 
+<<<<<<< HEAD
 /* Selected txt
 
 This will need to provide a CANONICAL answer to selected text colors.
+=======
+/*          Selected txt
+
+    This will need to provide a CANONICAL answer to selected text colors.
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
 
 */
 
 ::selection {
+<<<<<<< HEAD
    background-color: rgba(0, 0, 0, 0.25);
    color: rgba(0, 0, 0, 0.75);
 }
@@ -115,10 +174,28 @@ This will need to provide a CANONICAL answer to selected text colors.
 /* links(a)
 
 This will need to provide a CANONICAL answer to links.
+=======
+   background-color: #0065A4;
+   color: #FFFFFF;
+}
+
+::-moz-selection {
+   background-color: #0065A4;
+   color: #FFFFFF;
+}
+
+/*          links(a)
+
+    This will need to provide a CANONICAL answer to links.
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
 
 */
 
 a {
+<<<<<<< HEAD
+=======
+    color: #3465A4;
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
     text-decoration: none;
 }
 
@@ -128,7 +205,11 @@ a:hover {
 
 
 /*
+<<<<<<< HEAD
 Headers still need to be tested, but for now this will do.
+=======
+            Headers still need to be tested, but for now this will do.
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
 */
 
 
@@ -160,7 +241,11 @@ h6 {
 }
 
 p {
+<<<<<<< HEAD
     font-size: 15px;
+=======
+    font-size: 12px;
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
     margin: 1%;
 }
 
@@ -180,15 +265,32 @@ mark {
 
 /*
 
+<<<<<<< HEAD
 The following below still needs testing!
 the border and background-color to be removed or, different canonical colors.
+=======
+    The following below still needs testing! 
+    
+    the border and background-color to be removed or, different canonical colors.
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
 
 */
 
 
 blockquote {
+<<<<<<< HEAD
     margin: 5% auto;
     padding: 0px 3px;
+=======
+    background-color: #F5F5F5;
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px 1px 1px 10px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+    font-size: 100%;
+    margin: 5% auto;
+    padding: 2px 3px;
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
     text-align: left;
     width: 75%;
 }
@@ -209,7 +311,11 @@ blockquote i:after {
 
 cite {
     font-size: 12px;
+<<<<<<< HEAD
     padding: 0px 3px;
+=======
+    padding: 2px 3px;
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
     border: 1px solid #CCCCCC;
     background-color: #F5F5F5;
 }
@@ -247,14 +353,23 @@ code {
 }
 
 
+<<<<<<< HEAD
 /* inputs
 
 I deliberetly left this blank. the inputs need some further thinking.
 same thinking for select, option, form.
+=======
+/*  inputs
+
+            I deliberetly left this blank. the inputs need some further thinking.
+            
+            same thinking for select, option, form.
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
 
 */
 
 input {
+<<<<<<< HEAD
     background-image: none;
     background-color: #F9F9F9;
     border: 1px solid #CCCCCC;
@@ -319,11 +434,23 @@ textarea:active {
 
 textarea:focus {
     border: 1px solid #CCCCCC;
+=======
+    
+}
+
+hr {
+    border: 1px solid #CCCCCC;
+}
+
+img {
+    border: 0px none;
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
 }
 
 
 
 
+<<<<<<< HEAD
 
 hr {
     border: 1px solid #CCCCCC;
@@ -332,3 +459,5 @@ hr {
 img {
     border: 0px none;
 }
+=======
+>>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
