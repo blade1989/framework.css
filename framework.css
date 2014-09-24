@@ -8,12 +8,6 @@ Email : imri.paloja@gmail.com
 HomePage : www.eurobytes.nl
 Version : 0.1
 Name : Framework.css
-=======
-Author      : Imri Paloja
-Email       : imri.paloja@gmail.com
-HomePage    : www.eurobytes.nl
-Version     : 0.1
-Name        : Framework.css
 
 
 Note: This is still a work in progress!
@@ -33,12 +27,10 @@ Tags From: http://www.w3schools.com/tags/
 */
 
 a, abbr, acronym, address, applet, area, article, aside, audio, b, base, basefont, bdi, bdo, big, blockquote, body, br, button, canvas, caption, center, cite, code, col, colgroup, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, frame, frameset, head, header, h1, h2, h3, h4, h5, h6, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, meta, meter, nav, noframes, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, small, source, span, strike, strong, style, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, title, tr, track, tt, u, var, video, wbr {
-=======
             Tags From: http://www.w3schools.com/tags/
 */
 
 a, abbr, acronym, address, applet, area, article, aside, audio, b, base, basefont, bdi, bdo, big, blockquote, body, br, button, canvas, caption, center, cite, code, col, colgroup, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, frame, frameset, head, header, h1, h2, h3, h4, h5, h6, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, meta, meter, nav, noframes, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, small, source, span, strike, strong, style, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, title, tr, track, tt, u, ul, var, video, wbr {
->>>>>>> 7a55bbb357ea7143658beadee08aeb6d6c5b4a46
     border: 0 none;
     font-family: "Times New Roman",Georgia,Serif;
     font-size: 100%;
@@ -94,7 +86,7 @@ background: #CCCCCC;
 
 /* Arrow down up */
 
- Up arrow
+ /* Up arrow*/
 ::-webkit-scrollbar-thumb:hover {
 width: 0;
 height: 0;
@@ -369,9 +361,6 @@ input[type="search"]:active,input[type="text"]:active,button:active {
 input:active,button:active {
 
 }
-
-
-
 
 textarea {
     border: 1px solid rgba(0, 0, 0, 0.25);
