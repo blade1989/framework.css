@@ -47,6 +47,11 @@ article, aside, bdi, details, dialog, img figcaption, figure, footer, header, ma
     display: block;
 }
 
+* {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box 
+}
 
 /*
 
@@ -170,8 +175,21 @@ a {
     text-decoration: none;
 }
 
+
+a:link {
+	color: brown;
+}
+
+a:visited {
+	color: lightblue;
+}
+
 a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #454545;
 }
 
 
