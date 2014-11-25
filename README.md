@@ -71,8 +71,6 @@ Gotta fix em all!!
 Gotta fix em all!!
 Framework!!!
 
-Read more: Pokemon - Pokemon Theme Lyrics | MetroLyrics
-
 ----------
 
 Still in progress.
