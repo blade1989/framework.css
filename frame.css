@@ -226,8 +226,14 @@ header {
 
 }
 
-h1 {
 
+
+h1 {
+    font-family: serif;
+    font-size: 200%;
+    margin: 2px 3px;
+    padding: 2px 3px;
+    text-align: center;
 }
 
 h2 {
