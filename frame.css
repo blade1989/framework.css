@@ -10,6 +10,10 @@ Name 		: Framework.css
  list of tags are from: http://www.w3schools.com/tags/
 */
 
+* {
+    box-sizing: border-box;
+    color: #454545;
+}
 
 a, abbr, acronym, address, applet, area, article, aside, audio, b, base, basefont, bdi, bdo, big, blockquote, body, br, button, canvas, caption, center, cite, code, col, colgroup, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, frame, frameset, head, header, h1, h2, h3, h4, h5, h6, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, meta, meter, nav, noframes, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, small, source, span, strike, strong, style, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, title, tr, track, tt, u, var, video, wbr {
 	border: 0 none;
@@ -33,13 +37,27 @@ article, aside, bdi, details, dialog, img figcaption, figure, footer, header, ma
 	display: block;
 }
 
-
 a {
-
+	text-decoration: none;
 }
 
-abbr {
+a:hover {
+	text-decoration: underline;
+}
 
+a:link, a:visited {
+    color: brown;
+    cursor: pointer;
+}
+
+a:link:active, a:visited:active {
+    background: brown;
+    color: #FFFFFF;
+} 
+
+abbr {
+    border-bottom: 2px dotted #454545;
+    text-decoration: none;
 }
 
 acronym {
@@ -47,7 +65,8 @@ acronym {
 }
 
 address {
-
+    display: block;
+    font-style: italic;
 }
 
 applet {
@@ -59,11 +78,22 @@ area {
 }
 
 article {
-
+	background: #F9F9F9;
+	border: 1px solid #CCCCCC;
+	width: 75%;
+	margin: 20px auto;
+	padding: 20px 15px;
 }
 
 aside {
-
+	background: #F9F9F9;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	width: 25%;
+	float: right;
+	margin: 20px auto;
+	padding: 2px 3px;
 }
 
 audio {
@@ -71,7 +101,7 @@ audio {
 }
 
 b {
-
+    font-weight: 900;
 }
 
 base {
@@ -95,27 +125,193 @@ big {
 }
 
 blockquote {
-
+    background: #ffffff none repeat scroll 0 0;
+    border-left: 5px solid #cccccc;
+    box-shadow: 0 0 1px #454545;
+    margin: 20px auto;
+    padding: 2px 3px;
+    width: 75%;
 }
 
-body {
+blockquote i::before {
+	font-weight: 900;
+    content: open-quote;
+    font-size: 20px;
+    margin: 0 -5px 0 0;
+    padding: 0;
+}
 
+blockquote i:after {
+	font-weight: 900;	
+	content: close-quote;
+    font-size: 20px;
+    margin: 0px 0px 0px -5px;
+    padding: 0;
+}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
 }
 
 br {
 
 }
 
-button {
-
+/*button {
+    background: #eeeeee none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    padding: 0 3px;
 }
+
+button:hover {
+    background: #CCCCCC none repeat scroll 0 0;
+    border: 1px solid #EEEEEE;
+}*/
+
+input {
+    background-image: none;
+    -moz-box-shadow: 0px ;
+    -moz-border-radius: 0px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+    border-radius: 0px;
+}
+
+/* Removes dotted borders when clicked upon
+	https://css-tricks.com/removing-the-dotted-outline/
+*/
+
+input::-moz-focus-inner, button::-moz-focus-inner, a::-moz-focus-inner, select::-moz-focus-inner, option::-moz-focus-inner, [contenteditable=""]::-moz-focus-inner { 
+    border: 0;
+    outline: 0px;
+}
+
+/*input[type="number"] {
+    background: linear-gradient(to bottom, #FFFFFF, #F9F9F9) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #cccccc;
+    padding: 2px 3px;
+}*/
+
+input[type="range"]::-moz-focus-inner {
+    border: 0px;
+    outline: 0px;
+}
+
+input[type="range"] {
+    margin: 0px;
+}
+
+/*
+	Clickable buttons
+*/
+input[type="submit"],input[type="reset"],input[type="button"],button, .button, select {
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -webkit-appearance: none;
+    border-radius: 0px 0px 0px 0px;
+    background: linear-gradient(to bottom, #FFFFFF, #F9F9F9) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    color: #454545;
+    padding: 0px 3px;
+    text-align: center;
+}
+
+input[type="submit"]:hover,input[type="reset"]:hover,button:hover, .button:hover,input[type="button"]:hover {
+    box-shadow: 0 1px 2px rgba(30, 25, 25, 0.2);
+    background: linear-gradient(to bottom, #F9F9F9, #FFFFFF) repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+}
+
+input[type="search"], input[type="text"], input[type="password"], input[type="url"], input[type="email"], input[type="number"],input[type="date"],input[type="datetime"],input[type="month"],input[type="tel"],input[type="time"], input[type="week"], input[type="datetime-local"],input[type="range"], textarea, button, .button, input {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    font-size: 13px;
+    padding: 2px 3px;
+    width: 200px;
+}
+
+input[type="search"]:hover,input[type="text"]:hover,input[type="password"]:hover, input[type="email"]:hover, input[type="number"]:hover,input[type="date"]:hover,input[type="datetime"]:hover,input[type="month"]:hover,input[type="tel"]:hover,input[type="time"]:hover,input[type="week"]:hover,input[type="url"]:hover,input[type="datetime-local"]:hover, textarea:hover,button:hover, .button:hover, input:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+input[type="search"]:focus,input[type="text"]:focus,input[type="password"]:focus, input[type="email"]:focus,input[type="button"]:focus, input[type="number"]:focus,input[type="date"]:focus,input[type="datetime"]:focus,input[type="month"]:focus,input[type="tel"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="url"]:focus,input[type="datetime-local"]:focus, textarea:focus,button:focus, .button:focus, input:focus {
+    border: 1px solid #3465A4;
+    outline: 0 !important; /* Removes blue border in chrome when actived */
+}
+
+[contenteditable],[contenteditable]:focus {
+    outline: 0 !important; /* Removes blue border in chrome when actived */
+}
+
+input[type="search"]:active,input[type="text"]:active,input[type="password"]:active, input[type="email"]:active, button:active, .button:active,input[type="button"]:active, input[type="number"]:active, input[type="date"]:active,input[type="datetime"]:active,input[type="month"]:active,input[type="tel"]:active,input[type="time"]:active, input[type="week"]:active,input[type="url"]:active, input[type="datetime-local"]:active,input:active {
+    border: 1px solid #3465A4;
+    outline: 0 !important;
+}
+
+input:active,button:active, .button:active {
+    border: 1px solid #3465A4;
+}
+
+/*input[type="color"] {
+    border: 1px solid #cccccc;
+    height: 25px;
+    margin: 0;
+    padding: 1px 0;
+    width: 45px;
+}*/
+
+/*
+input[type="color"], input[type="color"]:focus, input[type="color"]:active, input[type="color"]:hover { 
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 0 none !important;
+    outline: 0 none !important;
+ }*/
+
+input[type="color"], input[type="color"]:focus, input[type="color"]:active, input[type="color"]:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 0 none !important;
+    outline: 0 none !important;
+}
+
+/*input[type="color"]:hover {
+    border: 1px inset #EEEEEE;
+    cursor: pointer;
+}
+
+input[type="color"]:active,input[type="color"]:focus {
+    border: 1px outset #EEEEEE;
+    cursor: pointer;
+}*/
+
+input[disabled] {
+    box-shadow: none !important;
+}
+
+input[disabled]::selection {
+   background-color: transparent;
+   color: graytext;
+}
+
+input[disabled]::-moz-selection {
+   background-color: transparent;
+   color: graytext;
+}
+
+
+
+
+
+
+
+
 
 canvas {
 
 }
 
 caption {
-
+	margin: 0px 0px -1px 0px;
 }
 
 center {
@@ -123,27 +319,32 @@ center {
 }
 
 cite {
-
+    border-bottom: 2px dotted #cccccc;
+    font-style: italic;
 }
 
 code {
-
+    background: #eeeeee none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    font-family: monospace;
+    padding: 0 3px;
 }
 
 col {
-
+    display: table-column;
 }
 
 colgroup {
-
+    display: table-column-group;
 }
 
 datalist {
-
+	display: none;
 }
 
 dd {
-
+    display: block;
+    margin-left: 40px;
 }
 
 del {
@@ -151,15 +352,37 @@ del {
 }
 
 details {
-
+    display: block;
+    font-family: italic;
 }
 
 dfn {
-
+    font-style: italic;
 }
 
 dialog {
+/*    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: -webkit-fit-content;
+    height: -webkit-fit-content;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    margin: auto;
+    border: 1px solid #CCCCCC;
+    padding: 1em;
+    background: white;*/
 
+    background: #eeeeee none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    left: 0;
+    margin: auto;
+    padding: 1em;
+    position: absolute;
+    right: 0;
 }
 
 dir {
@@ -179,15 +402,29 @@ dt {
 }
 
 em {
-
+    font-style: italic;
 }
 
 embed {
-
+    border: 1px solid #cccccc;
+    display: block;
+    margin: 0 auto;
+    width: 75%;
 }
 
-fieldset {
+embed:focus {
+    outline: none;
+} 
 
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove #EEEEEE;
 }
 
 figcaption {
@@ -195,14 +432,29 @@ figcaption {
 }
 
 figure {
-
+    margin: 0 auto;
+    text-align: center;
 }
+
 
 font {
 
 }
 
 footer {
+/*    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 75%;*/
+
+
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    margin: 20px 20px 20px -3px;
+    padding: 20px 15px;
+    width: 74%;
+
 
 }
 
@@ -234,7 +486,16 @@ h1 {
     margin: 2px 3px;
     padding: 2px 3px;
     text-align: center;
+    font-size: 190%;
 }
+
+h2, h3, h4, h5, h6 {
+    font-family: serif;
+	font-size: 160%;
+	padding: 5px 0px;
+	margin: 5px 0px;
+}
+
 
 h2 {
 
@@ -257,7 +518,9 @@ h6 {
 }
 
 hr {
-
+    border: 1px solid #cccccc;
+    display: block;
+    width: 100%;
 }
 
 html {
@@ -265,7 +528,7 @@ html {
 }
 
 i {
-
+    font-style: italic;
 }
 
 iframe {
@@ -273,7 +536,12 @@ iframe {
 }
 
 img {
+	width: 25%;
+	margin: 20px auto;
+}
 
+img[usemap="#planetmap"] {
+	width: unset !important;
 }
 
 input {
@@ -285,7 +553,18 @@ ins {
 }
 
 kbd {
-
+    background-color: #F7F7F7;
+    border: 1px solid #CCCCCC;
+    color: #333333;
+    display: inline-block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 0 0.1em;
+    padding: 1px 5px;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 keygen {
@@ -293,7 +572,9 @@ keygen {
 }
 
 label {
-
+    display: block;
+    margin: 2px 3px;
+    padding: 2px 3px;
 }
 
 legend {
@@ -349,7 +630,7 @@ object {
 }
 
 ol {
-
+    margin: 20px 44px;
 }
 
 optgroup {
@@ -365,7 +646,7 @@ output {
 }
 
 p {
-
+ margin: 20px auto;
 }
 
 param {
@@ -401,15 +682,16 @@ s {
 }
 
 samp {
-
-}
+    font-family: monospace;
+} 
 
 script {
 
 }
 
 section {
-
+    margin: 0 auto;
+    width: 50%;
 }
 
 select {
@@ -417,7 +699,7 @@ select {
 }
 
 small {
-
+    font-size: 12px;
 }
 
 source {
@@ -433,7 +715,7 @@ strike {
 }
 
 strong {
-
+    font-weight: bold;
 }
 
 style {
@@ -452,9 +734,18 @@ sup {
 
 }
 
-table {
+table, tbody, td, th, caption {
+/*    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;*/
 
-}
+    
+    border-collapse: separate;
+    border: 1px solid #CCCCCC;
+    padding: 2px 3px;
+    text-align: center;
+} 
 
 tbody {
 
@@ -505,7 +796,7 @@ u {
 }
 
 var {
-
+    font-style: italic;
 }
 
 video {
