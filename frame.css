@@ -806,3 +806,53 @@ video {
 wbr {
 
 }
+
+
+article [data-title]:hover::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(204, 204, 204, 0.8) rgba(0, 0, 0, 0);
+    border-image: none;
+    border-style: solid;
+    border-width: 6px 6px 0;
+    bottom: 24px;
+    content: "";
+    left: 40%;
+    position: absolute;
+    z-index: 99;
+}
+article [data-title]:hover::after {
+    background: rgba(204, 204, 204, 0.95) none repeat scroll 0 0;
+    border-radius: 5px;
+    bottom: 30px;
+    color: #454545;
+    content: attr(data-title);
+    font-family: helvetica;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    left: 20%;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+    text-overflow: clip;
+    vertical-align: baseline;
+    white-space: pre;
+    width: auto;
+    word-spacing: normal;
+    word-wrap: normal;
+    z-index: 99;
+}
+article [data-title] {
+    display: inline;
+    position: relative;
+}
