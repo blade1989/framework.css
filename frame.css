@@ -284,27 +284,14 @@ input[type="color"]:active,input[type="color"]:focus {
     cursor: pointer;
 }*/
 
-input[disabled] {
-    box-shadow: none !important;
+
+[disabled], [disabled]:hover, [disabled]:active, [disabled]:focus {
+    border: 1px solid #CCCCCC !important;
+    background-color: transparent !important;
+    color: graytext !important; 
+    box-shadow: unset !important;
+    cursor: not-allowed;
 }
-
-input[disabled]::selection {
-   background-color: transparent;
-   color: graytext;
-}
-
-input[disabled]::-moz-selection {
-   background-color: transparent;
-   color: graytext;
-}
-
-
-
-
-
-
-
-
 
 canvas {
 
@@ -813,7 +800,7 @@ article [data-title]:hover::before {
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    border-color: rgba(204, 204, 204, 0.8) rgba(0, 0, 0, 0);
+    border-color: rgba(204, 204, 204, 1.0) rgba(0, 0, 0, 0);
     border-image: none;
     border-style: solid;
     border-width: 6px 6px 0;
@@ -824,7 +811,8 @@ article [data-title]:hover::before {
     z-index: 99;
 }
 article [data-title]:hover::after {
-    background: rgba(204, 204, 204, 0.95) none repeat scroll 0 0;
+    background: rgba(255, 250, 250, 1.0) none repeat scroll 0 0;
+    border: 1px solid #CCCCCC;
     border-radius: 5px;
     bottom: 30px;
     color: #454545;
@@ -855,4 +843,105 @@ article [data-title]:hover::after {
 article [data-title] {
     display: inline;
     position: relative;
+}
+
+/******
+*
+*
+*
+*
+*/
+
+.frame-button {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.frame-button a {
+}
+
+.frame-button:hover {
+    opacity: 0.75;
+}
+
+.frame-button a {
+    width: 100%;
+    color: #FFFFFF;
+    display: block;
+}
+
+.frame-button a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.red {
+    background-color: #CC0000;
+}
+
+.blue {
+    background-color: #298CDA;
+}
+
+.green {
+    background-color: #B3C833;
+}
+
+/* Black Button */
+
+.black {
+    background-color: #454545;
+}
+
+
+
+/*
+    Notification Center
+*/
+
+#notification-center {
+    background: #eeeeee none repeat scroll 0 0;
+    border-bottom: 1px solid #454545;
+}
+
+#notification-center .info-icon {
+    color: #454545;
+    content: "!";
+    float: left;
+    font-size: 45px;
+    margin: 0 0 0 -15%;
+    padding: 20px;
+    text-shadow: 1px 1px 1px #454545;
+}
+
+#notification-center {
+    margin: -20px 0 0;
+    padding: 20px 250px;
+}
+
+#nojs {
+    padding: 20px 30px;
+    text-align: center;
+}
+
+
+.fw-close {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    float: right;
+    font-size: 15px;
+    margin: 10px -30px 0 0;
+    width: 25px;
+}
+
+.fw-close:hover {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    box-shadow: 1px 1px 1px #454545;
+    text-shadow: 0 0 0 #454545;
+}
+
+.fw-close:focus {
+    border: 0 none;
+    outline: 0 none !important;
 }
