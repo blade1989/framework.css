@@ -311,9 +311,10 @@ cite {
 }
 
 code {
-    background: #eeeeee none repeat scroll 0 0;
-    border: 1px solid #cccccc;
+    background: #EEEEEE none repeat scroll 0 0;
+    border: 1px solid #CCCCCC;
     font-family: monospace;
+    font-size: 12px;
     padding: 0 3px;
 }
 
@@ -440,7 +441,7 @@ footer {
     border: 1px solid #cccccc;
     margin: 20px 20px 20px -3px;
     padding: 20px 15px;
-    width: 74%;
+    width: 100%;
 
 
 }
@@ -944,4 +945,108 @@ article [data-title] {
 .fw-close:focus {
     border: 0 none;
     outline: 0 none !important;
+}
+
+
+
+
+
+div#wrapper {
+    width: 75%;
+    margin: 20px auto;
+}
+
+div#content {
+    background: #EEEEEE none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    padding: 20px 30px;
+}
+
+article, aside {
+    box-sizing: border-box;
+    /*width: 50%;*/
+    float: left;
+}
+
+aside h2, aside h3, aside h4, aside h5, aside h6 {
+    text-align: center;
+}
+
+
+.inputs {
+    list-style-type: none;
+}
+
+.inputs li {
+    margin: 2px 3px;
+    padding: 2px 3px;
+}
+
+input[type="number"] {
+    width: 200px !important;
+}
+
+a[href^="http://"]:not([href*="blade1989.github.io/framework.css/"]):after,
+a[href^="https://"]:not([href*="blade1989.github.io/framework.css/"]):after{
+    content: " " 
+}
+
+
+
+
+#eetextarea a[href$="*youtube*"]:after {
+    content: "DOC";
+    background-color: #5976AF;
+}
+
+
+a[href$=".pdf"]:after, a[href$=".doc"]:after, a[href$=".docx"]:after, a[href$=".xls"]:after, a[href$=".ppt"]:after {
+    border: 1px solid #454545;
+    border-radius: 25px;
+    color: #ffffff;
+    font-size: xx-small;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    margin-top: -5px;
+    padding: 0 5px;
+    text-decoration: none;
+    vertical-align: super;
+
+
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+#eetextarea a[href$=".pdf"]:after {
+    content: "PDF";
+    background-color: #CC0001;
+}
+
+#eetextarea a[href$=".doc"]:after {
+    content: "DOC";
+    background-color: #5976AF;
+}
+
+#eetextarea a[href$=".docx"]:after {
+    content: "DOCX";
+    background-color: #023B70;
+}
+
+#eetextarea a[href$=".xls"]:after {
+    content: "XLS";
+    background-color: #207245;
+}
+
+#eetextarea a[href$=".ppt"]:after {
+    content: "ppt";
+    background-color: #D24625;
+    padding-bottom: 2px;
+}
+
+.wf-lists-sbs {
+    border-right: 1px solid #cccccc;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 20px;
 }
