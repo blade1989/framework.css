@@ -10,8 +10,13 @@ Name 		: Framework.css
  list of tags are from: http://www.w3schools.com/tags/
 */
 
-* {
-    box-sizing: border-box;
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
     color: #454545;
 }
 
@@ -37,7 +42,18 @@ article, aside, bdi, details, dialog, img figcaption, figure, footer, header, ma
 	display: block;
 }
 
+/*
+    Here are some browsers specific fixes
+    
+*/
+
+*:focus, *:active  {
+    outline:0; /*removes the dotted border when press*/
+}
+
+
 a {
+    color: #a52a2a;/* Brown */
 	text-decoration: none;
 }
 
@@ -51,8 +67,8 @@ a:link, a:visited {
 }
 
 a:link:active, a:visited:active {
-    background: brown;
-    color: #FFFFFF;
+    /*background: #3c0000;*/
+    color: #3c0000;
 } 
 
 abbr {
@@ -78,15 +94,15 @@ area {
 }
 
 article {
-	background: #F9F9F9;
-	border: 1px solid #CCCCCC;
-	width: 75%;
-	margin: 20px auto;
-	padding: 20px 15px;
+    background: #f3f5f6 none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    margin: 20px auto;
+    padding: 20px 15px;
+    width: 75%;
 }
 
 aside {
-	background: #F9F9F9;
+	background: #f3f5f6 none repeat scroll 0 0;
 	border-top: 1px solid #CCCCCC;
 	border-right: 1px solid #CCCCCC;
 	border-bottom: 1px solid #CCCCCC;
@@ -150,8 +166,9 @@ blockquote i:after {
 }
 
 html, body {
-	margin: 0px;
-	padding: 0px;
+    background: #f9f9f9 none repeat scroll 0 0;
+    margin: 0;
+    padding: 0;
 }
 
 br {
@@ -298,7 +315,8 @@ canvas {
 }
 
 caption {
-	margin: 0px 0px -1px 0px;
+    border-bottom: 1px solid #cccccc;
+    margin: 0 0 -1px;
 }
 
 center {
@@ -311,9 +329,10 @@ cite {
 }
 
 code {
-    background: #eeeeee none repeat scroll 0 0;
-    border: 1px solid #cccccc;
+    background: #EEEEEE none repeat scroll 0 0;
+    border: 1px solid #CCCCCC;
     font-family: monospace;
+    font-size: 12px;
     padding: 0 3px;
 }
 
@@ -419,10 +438,26 @@ figcaption {
 }
 
 figure {
-    margin: 0 auto;
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    margin: 20px auto;
+    padding: 10px 30px;
     text-align: center;
+    width: 50%;
 }
 
+figure img {
+    border: 1px solid #dddddd;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+figure figcaption {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
 
 font {
 
@@ -440,7 +475,7 @@ footer {
     border: 1px solid #cccccc;
     margin: 20px 20px 20px -3px;
     padding: 20px 15px;
-    width: 74%;
+    width: 100%;
 
 
 }
@@ -477,10 +512,11 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
+    border-bottom: 1px solid #cccccc;
     font-family: serif;
-	font-size: 160%;
-	padding: 5px 0px;
-	margin: 5px 0px;
+    font-size: 160%;
+    margin: 5px 0;
+    padding: 5px 0;
 }
 
 
@@ -508,10 +544,6 @@ hr {
     border: 1px solid #cccccc;
     display: block;
     width: 100%;
-}
-
-html {
-
 }
 
 i {
@@ -722,24 +754,22 @@ sup {
 }
 
 table, tbody, td, th, caption {
-/*    display: table;
     border-collapse: separate;
-    border-spacing: 2px;
-    border-color: gray;*/
-
-    
-    border-collapse: separate;
-    border: 1px solid #CCCCCC;
     padding: 2px 3px;
     text-align: center;
-} 
+}
+
+tr:nth-child(odd) {
+    background: #CCCCCC;
+}
+
 
 tbody {
 
 }
 
 td {
-
+    border-bottom: 1px solid #cccccc;
 }
 
 textarea {
@@ -766,8 +796,8 @@ title {
 
 }
 
-tr {
-
+table tr {
+    border-bottom: 1px solid #cccccc !important;
 }
 
 track {
@@ -794,6 +824,9 @@ wbr {
 
 }
 
+/*
+    Down arrow: for the tooltip
+*/
 
 article [data-title]:hover::before {
     -moz-border-bottom-colors: none;
@@ -806,7 +839,7 @@ article [data-title]:hover::before {
     border-width: 6px 6px 0;
     bottom: 24px;
     content: "";
-    left: 40%;
+    left: 45%;
     position: absolute;
     z-index: 99;
 }
@@ -818,12 +851,13 @@ article [data-title]:hover::after {
     color: #454545;
     content: attr(data-title);
     font-family: helvetica;
+    opacity: 1.0 !important;
     font-size: 14px;
     font-stretch: normal;
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
-    left: 20%;
+    left: 40%;
     letter-spacing: 0;
     line-height: 22px;
     margin: 0;
@@ -841,9 +875,21 @@ article [data-title]:hover::after {
     z-index: 99;
 }
 article [data-title] {
-    display: inline;
+    /*display: inline !important;*/
     position: relative;
 }
+
+/*
+    Further information to the links
+*/
+
+article [data-title]:hover::before[target="_blank"] {
+    content: "T";
+}
+
+
+
+
 
 /******
 *
@@ -857,11 +903,18 @@ article [data-title] {
     text-align: center;
 }
 
-.frame-button a {
+.frame-button a:hover {
+    opacity: 0.75;
 }
 
-.frame-button:hover {
-    opacity: 0.75;
+/*
+    If there is a data-title in the tag, 
+    this will make sure the data-title 
+    does not opacity 0.75, too.
+*/
+
+.frame-button a[data-title]:hover {
+    opacity: 1.0 !important;
 }
 
 .frame-button a {
@@ -944,4 +997,139 @@ article [data-title] {
 .fw-close:focus {
     border: 0 none;
     outline: 0 none !important;
+}
+
+
+
+
+
+div#wrapper {
+    width: 75%;
+    margin: 20px auto;
+}
+
+div#content {
+    background: #EEEEEE none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    padding: 20px 30px;
+}
+
+article, aside {
+    box-sizing: border-box;
+    /*width: 50%;*/
+    float: left;
+}
+
+aside h2, aside h3, aside h4, aside h5, aside h6 {
+    text-align: center;
+}
+
+
+.inputs {
+    list-style-type: none;
+}
+
+.inputs li {
+    margin: 2px 3px;
+    padding: 2px 3px;
+}
+
+input[type="number"] {
+    width: 200px !important;
+}
+
+/*
+    Conflicts with the tooltip
+\*/
+
+/*a[href^="http://"]:not([href*="blade1989.github.io/framework.css/"]):after,
+a[href^="https://"]:not([href*="blade1989.github.io/framework.css/"]):after{
+    content: " " 
+}*/
+
+
+
+
+#eetextarea a[href$="*youtube*"]:after {
+    content: "DOC";
+    background-color: #5976AF;
+}
+
+
+a[href$=".pdf"]:after, a[href$=".doc"]:after, a[href$=".docx"]:after, a[href$=".xls"]:after, a[href$=".ppt"]:after {
+    border: 1px solid #454545;
+    border-radius: 25px;
+    color: #ffffff;
+    font-size: xx-small;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    margin-top: -5px;
+    padding: 0 5px;
+    text-decoration: none;
+    vertical-align: super;
+
+
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+#eetextarea a[href$=".pdf"]:after {
+    content: "PDF";
+    background-color: #CC0001;
+}
+
+#eetextarea a[href$=".doc"]:after {
+    content: "DOC";
+    background-color: #5976AF;
+}
+
+#eetextarea a[href$=".docx"]:after {
+    content: "DOCX";
+    background-color: #023B70;
+}
+
+#eetextarea a[href$=".xls"]:after {
+    content: "XLS";
+    background-color: #207245;
+}
+
+#eetextarea a[href$=".ppt"]:after {
+    content: "ppt";
+    background-color: #D24625;
+    padding-bottom: 2px;
+}
+
+.wf-lists-sbs {
+/*    border-right: 1px solid #cccccc;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 20px;*/
+
+    float: left;
+    margin: 15px 40px;
+    padding: 0 10px;
+    /*width: 250px;*/
+}
+
+
+.wf-lists-sbs ul {
+    list-style-type: none;
+    max-height: 240px;
+    min-height: 250px;
+    padding-left: 0;
+    /*width: 150px;*/
+}
+
+#asideblock {
+    display: inline-block;
+    width: 100%;
+    visibility: hidden;
+}
+
+.wf-lists-sbs li {
+    list-style-type: initial !important;
+    margin: 0 0 0 15px;
+    padding: 5px 0;
+    /*width: 150px;*/
 }
