@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>text - frameworks.css</title>
+	<title>Media - frameworks.css</title>
     <link rel="shortcut icon" href="http://www.eurobytes.nl/favicon.ico" type="image/x-icon">
     <meta name="description" content="Part reset, part normalize. It tries to be the very best, Like no css ever was. To catch visual inconsistencies is its real test, To train it is my cause... Sorry for that.!">
     <meta name="keywords" content="Framework, CSS, HTML">
@@ -30,6 +30,21 @@
     <![endif]-->
 
 
+<style type="text/css">
+  .video {
+    background: #000000;
+    margin: 20px auto;
+    width: 450px;
+    height: 250px;
+  }
+
+  .video video {
+    width: 450px;
+    height: 250px;
+  }
+
+</style>
+
 </head>
 <body>
 	
@@ -52,80 +67,45 @@
 
         <article>
 
-          <h1>Header 1</h1>
+        <h2>
+          Media
+        </h2>
 
-          <p>
-            <b>Lorem</b> ipsum <a href="#" data-title="Dollla Dolla bill ya'all">dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis <strong>nostrud</strong> exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum <i>dolore</i> eu <u>fugiat</u> <mark>nulla</mark> pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+        <h3>
+          The Video tag
+        </h3>
 
-          <h2>Header 2</h2>
+        <div class="video">
+          <video autobuffer autoloop loop controls poster="/images/video.png"
+            src="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two(HD).mp4"
+            src="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two.flv"
+            src="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two.mkv"
+            src="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two.mp4"
+            src="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two.ogg"
+            src="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two.webm"
+            src="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two_(2011).3gp">
+          </video>
+        </div>
 
-          <p>
-            Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud <del>exercitation</del> ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in <ins>voluptate</ins> velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, <small>sunt</small> in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+<br><br><br>
 
-          <h3>Header 3</h3>
+        <h3>
+          The Video Tag with legacy object
+        </h3>
 
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor <sub>incididunt</sub>  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu <sup>fugiat</sup> nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-
-          <h4>Header 4</h4>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, <cite>sunt in culpa</cite> qui officia deserunt mollit anim id est laborum.
-          </p>
-
-
-            <blockquote cite="http://example.com/example.html#cite">
-              <i>
-                ...
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor
-                ...
-              </i> - <a href="#" data-title="Author">lorem</a>, <a href="#" data-title="The Lorem 1016">The Lorem 1016</a>
-            </blockquote>
-
-          <h5>Header 5</h5>
-
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa <a href="https://www.google.nl/" data-title="Secure - https - Google" target="_blank">qui</a> officia deserunt mollit anim id est laborum.
-          </p>
-
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Debian.png" alt="Debian" style="width: 250px;">
-
-            <hr>
-
-            <a href="http://www.eurobytes.nl/favicon.png" data-title="EuroBytes Favorite Icon" target="_blank">
-              <img src="http://www.eurobytes.nl/favicon.png" alt="EuroBytes Favorite Icon" style="width: 250px;">
-            </a>
-
- </article>
+        <div class="video">
+          <video autobuffer autoloop loop controls>
+            <source src="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two.ogg">
+            <source src="//mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two.mp4">
+            <object type="video/ogg" data="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two.ogg" width="320" height="240">
+            <param name="src" value="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two.ogg">
+            <param name="autoplay" value="false">
+            <param name="autoStart" value="0">
+            <p><a href="/mnt/DATA/Documenten/Website/Websites/testers/euro-player/tune-for-two/Tune_for_Two.ogg">Download this video file.</a></p>
+            </object>
+          </video>
+        </div>
+        </article>
 
         <aside>
           <h4>Category</h4>
